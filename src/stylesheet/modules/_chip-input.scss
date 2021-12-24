@@ -1,0 +1,17 @@
+.chips-input-container {
+  @extend %flex-row-i-center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  .chips-input {
+    @extend %flex-row-c-btw-i-center;
+    flex: 1 1 auto;
+    .text-input {
+      min-width: 10rem;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

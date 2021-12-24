@@ -1,0 +1,22 @@
+.chip {
+  @extend %flex-row-c-center-i-center;
+  gap: 0.25rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: map-get($color, grey-b);
+  border-radius: 9rem;
+  padding: 0.25rem 0.8rem;
+  font-size: inherit;
+  &-delete {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    &-img {
+      display: block;
+    }
+  }
+}

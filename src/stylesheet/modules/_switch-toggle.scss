@@ -1,0 +1,51 @@
+.switch-toggle {
+  background-color: map-get($color, primary);
+  appearance: none;
+  width: 7rem;
+  height: 3.3rem;
+  border-radius: 100px;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  &:checked {
+    background: map-get($color, grey-c);
+    opacity: 0.6;
+  }
+  //text
+  &::after {
+    content: "On";
+    position: absolute;
+    font-size: map-get($font-size, normal);
+    font-weight: bold;
+    color: map-get($color, white);
+    top: 20%;
+    right: 1rem;
+  }
+  &:checked::after {
+    content: "Off";
+    position: absolute;
+    font-size: map-get($font-size, normal);
+    font-weight: bold;
+    color: map-get($color, white);
+    top: 20%;
+    left: 1rem;
+  }
+  //button swicth
+  &::before {
+    position: absolute;
+    background: map-get($color, white);
+    height: 2.3rem;
+    width: 2.3rem;
+    left: 0.5rem;
+    top: 12%;
+    transition: all 0.2s;
+    border-radius: 100px;
+    content: "";
+    display: block;
+    box-shadow: 1px 2px 2px 1px rgba(1, 1, 1, 0.3);
+  }
+  &:checked::before {
+    margin-left: 3.5rem;
+    transition: all 0.2s;
+  }
+}
