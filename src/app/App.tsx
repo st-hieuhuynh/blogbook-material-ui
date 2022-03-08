@@ -23,6 +23,7 @@ import { AuthService } from './core/services/auth.service';
 const store = createStore(appReducer, applyMiddleware(thunk, logger));
 export type RootState = ReturnType<typeof store.getState>;
 const auth = new AuthService();
+
 const App = () => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
